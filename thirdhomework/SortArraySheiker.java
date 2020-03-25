@@ -14,6 +14,8 @@ public class SortArraySheiker {
     for (int i = 0; i < mas.length; i++) {
         mas[i] = s.nextInt();
     }
+     System.out.print("массив " + Arrays.toString(mas));
+
     int leftSide = 0;
     int rightSide = mas.length - 1;
 
@@ -40,7 +42,7 @@ public class SortArraySheiker {
         // последнего for, что бы уменьшить кол-во проходокб нужно инкрементировать счётчик
     } while (leftSide < rightSide); // Априори наше условие при котором буду происходить
     // проходки
-
+        System.out.println();
         System.out.print("шейкерная сортировка выполнена " + Arrays.toString(mas));
     }
 }
