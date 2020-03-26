@@ -14,9 +14,11 @@ public class SortArrayMerge {
         for (int i = 0; i < mas.length; i++) {
             mas[i] = s.nextInt();
         }
+        System.out.print("массив " + Arrays.toString(mas));
         int[] result = mergesort(mas);
         //
-        System.out.println(Arrays.toString(result));
+        System.out.println();
+        System.out.println("сортировка слиянием выполнена " + Arrays.toString(result));
     }
 
     public static int[] mergesort(int[] mas) {
