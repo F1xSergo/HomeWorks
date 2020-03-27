@@ -2,10 +2,10 @@ package edu.academy.fourthhomework;
 
 import java.util.Comparator;
 
-public class CountryAreaComparator implements Comparator<Country> {
+public class CountryAreaComparator implements Comparator<ECountry> {
 
     @Override
-    public int compare(Country o1, Country o2) {
+    public int compare(ECountry o1, ECountry o2) {
         return 0;
     }
 }
