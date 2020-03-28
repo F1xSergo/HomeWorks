@@ -6,25 +6,22 @@ public enum ECountry implements Info {
     FRANCE(345, 53), TURKEY(65, 7), ITALY(67, 8),
     USA(34, 43), MEXICO(42,424);
 
-    int quantity;
-    int square;
+    private int quantity;
+    private int square;
 
     ECountry(int quantity, int square) {
         this.quantity = quantity;
         this.square = square;
     }
     public void info(int quantity, int square) {
-        System.out.println(BELARUS);
+        return;//сюда пока не смотри
 
     }
 
     @Override
     public String toString() {
-        return "info{" + "quantity=" + quantity + ", square=" + square + '}';
+        return name() + "{" + "quantity=" + quantity + ", square=" + square + '}';
     }
-
-
-
 }
 
 
