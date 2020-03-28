@@ -13,12 +13,18 @@ public enum ECountry implements Info {
         this.quantity = quantity;
         this.square = square;
     }
-
-
     public void info(int quantity, int square) {
-        return;
+        System.out.println(BELARUS);
 
     }
+
+    @Override
+    public String toString() {
+        return "info{" + "quantity=" + quantity + ", square=" + square + '}';
+    }
+
+
+
 }
 
 
