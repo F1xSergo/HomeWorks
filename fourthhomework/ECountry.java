@@ -13,20 +13,25 @@ public enum ECountry implements Info {
         return valueOf((name.toUpperCase()));
     }
 
-    ECountry(int quantity, int square) {
-        this.quantity = quantity;
-        this.square = square;
-    }
-    public void info(int quantity, int square) {
-        return;
-
+    ECountry(int getQuantity, int getSquare) {
+        this.quantity = getQuantity;
+        this.square = getSquare;
     }
 
+
+    @Override
+    public int getQuantity() {
+        return quantity;
+    }
+
+    @Override
+    public int getSquare() {
+        return square;
+    }
     @Override
     public String toString() {
         return name() + "{" + "quantity = " + quantity + ", square = " + square + '}';
     }
-
 }
 
 
