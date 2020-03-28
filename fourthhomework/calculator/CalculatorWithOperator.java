@@ -1,25 +1,18 @@
-package edu.academy.secondhomework;
+package edu.academy.fourthhomework.calculator;
 //4.1 + 15 * 7 + (28 / 5) ^ 2
-public class CalculatorWithOperator {
-    //    public double roundResult(double d, int precise){
-//        double z = 140.45999999999998;
-//        precise = 10^precise;
-//        z = z * precise;
-//        int i = (int) Math.round(z);
-//        return (double) i/precise;
-//    }
+public class CalculatorWithOperator implements ICalculator {
     public double plus(double a, double b) {
         double c = a + b;
         return c;
     }
 
-    public int minus(int a, int b) {
-        int d = a - b;
+    public double minus(double a, double b) {
+        double d = a - b;
         return d;
     }
 
-    public int umno(int a, int b) {
-        int e = a * b;
+    public double umno(double a, double b) {
+        double e = a * b;
         return e;
     }
 
@@ -36,7 +29,7 @@ public class CalculatorWithOperator {
         return g;
     }
 
-    public double abs(double a) {
+    public double ABS(double a) {
         if (a < 0) {                //формула модуль из числа
             return -a;
         } else {
@@ -58,12 +51,13 @@ public class CalculatorWithOperator {
         double c = 1;
         for (; ; ) {                      //формул квадратный корень 2
             double ac = (c + a / c) / 2;
-            if (abs(c - ac) < 1e-10)
+            if (ABS(c - ac) < 1e-10)
                 break;
             c = ac;
         }
         return  c;
     }
+
 }
 
 
