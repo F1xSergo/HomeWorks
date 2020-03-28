@@ -9,19 +9,24 @@ public enum ECountry implements Info {
     private int quantity;
     private int square;
 
+    public static ECountry valueOFIgnoreCase(String name){// возвращает из enum игнорируя регистр
+        return valueOf((name.toUpperCase()));
+    }
+
     ECountry(int quantity, int square) {
         this.quantity = quantity;
         this.square = square;
     }
     public void info(int quantity, int square) {
-        return;//сюда пока не смотри
+        return;
 
     }
 
     @Override
     public String toString() {
-        return name() + "{" + "quantity=" + quantity + ", square=" + square + '}';
+        return name() + "{" + "quantity = " + quantity + ", square = " + square + '}';
     }
+
 }
 
 
