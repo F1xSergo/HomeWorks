@@ -2,7 +2,7 @@ package edu.academy.fourthhomework.calculator;
 
 import edu.academy.secondhomework.CalculatorWithOperator;
 
-public class CalculatorWithOperatorMain {
+public class CalculatorMain {
     public static void main(String[] args) {
         CalculatorWithOperator ca = new CalculatorWithOperator();
         double result = ca.plus(4.1,ca.umno(15,7)) + (ca.power(ca.del(28,5),2));
