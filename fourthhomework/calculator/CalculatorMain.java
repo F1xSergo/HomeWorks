@@ -14,7 +14,7 @@ public class CalculatorMain {
         System.out.println();
         System.out.printf("%.1f", result / 0);//бесконечность
         System.out.println();
-
+// with Math
         CalculatorWithMath cam = new CalculatorWithMath();
         double res = cam.plus(4.1,cam.umno(15,7)) + (cam.power(cam.del(28,5),2));
         System.out.println("Результат CalculatorWithMath: ");
@@ -24,6 +24,17 @@ public class CalculatorMain {
         System.out.printf("%.1f", res / 0.0d);//бесконечность
         System.out.println();
         System.out.printf("%.1f", res / 0);//бесконечность
+        System.out.println();
+
+// with counter
+        CalculatorWithCounter ccount = new CalculatorWithCounter(new CalculatorWithMath());
+        double resc = ccount.plus(4.1,ccount.umno(15,7)) + (ccount.power(cam.del(28,5),2));
+        System.out.println("Результат CalculatorWithCount: ");
+        System.out.println(resc);
+        System.out.printf("%.1f", resc);
+        System.out.println();
+        System.out.println(ccount.getCount());
+
     }
 }
 //4.1 + 15 * 7 + (28 / 5) ^ 2
