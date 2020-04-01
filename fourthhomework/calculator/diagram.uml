@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="153.0">edu.academy.fourthhomework.calculator.CalculatorMain</node>
+    <node x="0.0" y="79.0">edu.academy.fourthhomework.calculator.CalculatorWithCounter</node>
+    <node x="437.0" y="79.0">edu.academy.fourthhomework.calculator.CalculatorWithMath</node>
+    <node x="253.5" y="0.0">edu.academy.fourthhomework.calculator.ICalculator</node>
+    <node x="215.0" y="79.0">edu.academy.fourthhomework.calculator.CalculatorWithOperator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="edu.academy.fourthhomework.calculator.CalculatorWithMath" target="edu.academy.fourthhomework.calculator.ICalculator">
+      <point x="0.0" y="-14.5" />
+      <point x="524.0" y="54.0" />
+      <point x="357.66666666666663" y="54.0" />
+      <point x="41.66666666666663" y="14.5" />
+    </edge>
+    <edge source="edu.academy.fourthhomework.calculator.CalculatorWithOperator" target="edu.academy.fourthhomework.calculator.ICalculator">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="edu.academy.fourthhomework.calculator.CalculatorWithCounter" target="edu.academy.fourthhomework.calculator.ICalculator">
+      <point x="0.0" y="-14.5" />
+      <point x="97.5" y="54.0" />
+      <point x="274.3333333333333" y="54.0" />
+      <point x="-41.666666666666686" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.2000000000000002" x="285.3571428571428" y="276.42857142857133" />
+  <SelectedNodes>
+    <node>edu.academy.fourthhomework.calculator.CalculatorWithCounter</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
