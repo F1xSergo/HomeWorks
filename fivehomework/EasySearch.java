@@ -9,18 +9,21 @@ public class EasySearch implements ISearchEngine {
      String filePath = "f:/git/src/edu/academy/fivehomework/Война и мир.txt";
      String a = " Война";
      String b = " и ";
-     String c = " мир ";
+     String c = " Мир ";
      // String text;
 
 
     @Override
     public  int search(String text, String word) {
-        this.filePath = word;
-        this.a = text;
-        this.b = text;
-        this.c = text;
+
+        this.filePath = text;
+        this.a = word;
+        this.b = word;
+        this.c = word;
+        word = word.toLowerCase().trim();
         text = text.toLowerCase();
-        word = word.toLowerCase();
+
+
         // this.text = text;
 
         int i = word.indexOf(text);
