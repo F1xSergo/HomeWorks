@@ -9,9 +9,9 @@ public class SearchMain {
 
 
 
-        //System.out.println(s.search(s.a, s.readAllBytesJava(s.filePath)));//51
+        System.out.println(s.search(s.a, s.readAllBytesJava(s.filePath)));//51
         //System.out.println(s.search(s.b, s.readAllBytesJava(s.filePath)));//13883
-        System.out.println(s.search(s.c, s.readAllBytesJava(s.filePath)));//18
+        //System.out.println(s.search(s.c, s.readAllBytesJava(s.filePath)));//18
 
 
 
