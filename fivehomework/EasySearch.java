@@ -7,20 +7,20 @@ import java.nio.file.Paths;
 
 public class EasySearch implements ISearchEngine {
      String filePath = "f:/git/src/edu/academy/fivehomework/Война и мир.txt";
-     String a = "Война";
-     String b = "и";
-     String c = "мир";
+     String a = " Война";
+     String b = " и ";
+     String c = " мир ";
      // String text;
 
 
     @Override
     public  int search(String text, String word) {
-        text = text.toLowerCase();
-        word = word.toLowerCase();
         this.filePath = word;
         this.a = text;
         this.b = text;
         this.c = text;
+        text = text.toLowerCase();
+        word = word.toLowerCase();
         // this.text = text;
 
         int i = word.indexOf(text);
