@@ -8,7 +8,8 @@ import java.util.*;
 public class MapMainHomeWork2 {
     public static void main(String[] args) {
         String filePath = readAllBytesJava("f:/git/src/edu/academy/fivehomework/Война и мир.txt");
-        String[] words = filePath.toLowerCase().split(" ");
+        String[] words = filePath.toLowerCase().replaceAll("\\,|\\.|\\(|\\?|\\!|\\|\\--|\\-|\\;","").split(" ");
+        //String[] words = filePath.toLowerCase().split(" ");
 
 
         Map<String, Integer> unsortMap = new HashMap<String, Integer>();
@@ -23,6 +24,8 @@ public class MapMainHomeWork2 {
         System.out.println("\nSorted Map......By Value");
         Map<String, Integer> sortedMap = sortByValue(unsortMap);
         printMap(sortedMap);
+
+
 
     }
 
@@ -46,22 +49,24 @@ public class MapMainHomeWork2 {
         });
 
 
-
         // 3. Зациклить отсортированный список и поместить его в новый порядок вставки Map LinkedHashMap
         Map<String, Integer> sortedMap = new LinkedHashMap<String, Integer>();
         for (Map.Entry<String, Integer> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());
         }
-         return sortedMap;
-         }
+        return sortedMap;
+    }
+
+
 
          public static <K, V> void printMap(Map<K, V> map) {
              for (Map.Entry<K, V> entry : map.entrySet()) {
+
                  System.out.println(entry.getKey() + " : " + entry.getValue());
 
              }
          }
-         
+
         private static String readAllBytesJava (String filePath){
             String content = "";
             try {
