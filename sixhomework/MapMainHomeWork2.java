@@ -28,10 +28,10 @@ public class MapMainHomeWork2 {
 
     private static Map<String, Integer> sortByValue(Map<String, Integer> unsortMap) {
 
-        List<Map.Entry<String, Integer>> list =
-                new LinkedList<Map.Entry<String, Integer>>(unsortMap.entrySet());
+// 1. Конвертировать карту в список карт
+        List<Map.Entry<String, Integer>> list = new LinkedList<Map.Entry<String, Integer>>(unsortMap.entrySet());
 
-
+// 2. Сортировать список с Collections.sort (), предоставить собственный компаратор
         Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
             public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
                 if (o1.getValue() > o2.getValue()) {
@@ -47,7 +47,7 @@ public class MapMainHomeWork2 {
 
 
 
-        //3. Loop the sorted list and put it into a new insertion order Map LinkedHashMap
+        // 3. Зациклить отсортированный список и поместить его в новый порядок вставки Map LinkedHashMap
         Map<String, Integer> sortedMap = new LinkedHashMap<String, Integer>();
         for (Map.Entry<String, Integer> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());
@@ -61,7 +61,7 @@ public class MapMainHomeWork2 {
 
              }
          }
-
+         
         private static String readAllBytesJava (String filePath){
             String content = "";
             try {
