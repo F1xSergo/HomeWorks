@@ -26,23 +26,26 @@ public class MapMainHomeWork2 {
 
         Map<String, Integer> sortedMap = sortByValue(unsortMap);
 //        // 10 самых используемых
-//            System.out.println("Sorted Map...10...By Value");
-//            List<Map.Entry<String, Integer>> list = new ArrayList<>(sortedMap.entrySet());
-//            for (int i = 0; i < 10; i++) {
-//                System.out.println(list.get(i));
+//        System.out.println("Sorted Map...10...By Value");
+//        List<Map.Entry<String, Integer>> list = new ArrayList<>(sortedMap.entrySet());
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println(list.get(i));
 
-        System.out.println("Sorted Map......By Value");
-        for (Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
-            System.out.println((entry.getKey() + " : " + entry.getValue()));
-    }
-    }
+            System.out.println("Sorted Map......By Value");
+            for (Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
+                System.out.println((entry.getKey() + " : " + entry.getValue()));
+            }
+        }
+
 
 //    printMap(sortedMap);
-//
 //}}
 
+//            public static <String, Integer extends Comparable<? super Integer>> Map<String,
+//                Integer> sortByValue(Map<String, Integer> unsortMap) {
 
     private static Map<String, Integer> sortByValue(Map<String, Integer> unsortMap) {
+
 
 // 1. Конвертировать карту в список карт
         List<Map.Entry<String, Integer>> list = new LinkedList<>(unsortMap.entrySet());
@@ -57,7 +60,7 @@ public class MapMainHomeWork2 {
                 } else {
                     return 0;
                 }
-             //   return (o1.getValue()).compareTo(o2.getValue());
+               // return (o1.getValue()).compareTo(o2.getValue());
             }
         });
 
@@ -91,3 +94,4 @@ public class MapMainHomeWork2 {
 //            System.out.println((entry.getKey() + " : " + entry.getValue()));
 //        }
 //    }
+
