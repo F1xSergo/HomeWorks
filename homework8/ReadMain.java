@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class ReadMain {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         List<Students> list = new ArrayList<>();
         Set<Students> set = new TreeSet<>();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("students.bin"))) {
