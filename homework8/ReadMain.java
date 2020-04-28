@@ -22,24 +22,24 @@ public class ReadMain {
         }
 
 
-
         //list
         Collections.sort(list);
-        FileWriter fw = new FileWriter("students_list.txt");
-        for (Students st : list) {
-            String name = st.name;
-            fw.write(name + System.getProperty("line.separator"));
-            // System.out.println(name);
+        try (FileWriter fw = new FileWriter("students_list.txt")) {
+            for (Students st : list) {
+                String name = st.name;
+                fw.write(name + System.getProperty("line.separator"));
+                // System.out.println(name);
+            }
+            //set
+            FileWriter fw1 = new FileWriter("students_set.txt");
+            for (Students st : set) {
+                String name = st.name;
+                fw1.write(name + System.getProperty("line.separator"));
+                //System.out.println(name);
+            }
+        } catch (IOException | ClassCastException e) {
+            e.printStackTrace();
         }
-        //set
-        FileWriter fw1 = new FileWriter("students_set.txt");
-        for (Students st : set) {
-            String name = st.name;
-            fw1.write(name + System.getProperty("line.separator"));
-            //System.out.println(name);
-        }
-        fw.close();
-        fw1.close();
     }
 }
 
