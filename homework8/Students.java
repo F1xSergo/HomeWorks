@@ -3,8 +3,9 @@ package edu.academy.homework8;
 import java.io.Serializable;
 import java.util.Random;
 
-public class Students implements Serializable {
-    public String studentName;
+public class Students implements Serializable, Comparable<Students> {
+    private static final long serialVersionUID = -360722457549595523L;
+    public String name;
 
     public Students() {
 
@@ -17,19 +18,18 @@ public class Students implements Serializable {
             char c = chars[rand.nextInt(chars.length)];
             randString.append(c);
         }
-        this.studentName = randString.toString();
+        this.name = randString.toString();
     }
 
     public String toString() {
-        String str = "- " + this.studentName + " ";
+        String str = "- " + this.name + " ";
         return str;
     }
+    @Override
+    public int compareTo(Students o) {
+        return this.name.compareTo(o.name);
+    }
 }
-
-//        @Override
-//        public int compareTo(Student o) {
-//            return this.studentName.compareTo(o.studentName);
-//        }
 
 // public String getRandomName(int length, String alphabet)  {
 //        StringBuilder sb = new StringBuilder(Math.max(length, 16));
