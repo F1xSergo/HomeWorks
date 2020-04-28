@@ -38,6 +38,8 @@ public class ReadMain {
             fw1.write(name + System.getProperty("line.separator"));
             //System.out.println(name);
         }
+        fw.close();
+        fw1.close();
     }
 }
 
