@@ -3,12 +3,11 @@ package edu.academy.homework8;
 import java.io.Serializable;
 import java.util.Random;
 
-public class Students implements Serializable, Comparable<Students> {
+public class Students implements Serializable, Comparable<Students>{
     private static final long serialVersionUID = -360722457549595523L;
     public String name;
 
     public Students() {
-
         char[] chars = "abcdefghijklmnopqrstuvwxyz".toCharArray();
         StringBuilder randString = new StringBuilder();
         Random rand = new Random();
@@ -30,6 +29,8 @@ public class Students implements Serializable, Comparable<Students> {
         return this.name.compareTo(o.name);
     }
 }
+
+
 
 // public String getRandomName(int length, String alphabet)  {
 //        StringBuilder sb = new StringBuilder(Math.max(length, 16));
