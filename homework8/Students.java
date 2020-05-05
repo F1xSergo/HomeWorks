@@ -8,6 +8,7 @@ public class Students implements Serializable, Comparable<Students>{
     public String name;
 
     public Students() {
+        // генерация слов
         char[] chars = "abcdefghijklmnopqrstuvwxyz".toCharArray();
         StringBuilder randString = new StringBuilder();
         Random rand = new Random();

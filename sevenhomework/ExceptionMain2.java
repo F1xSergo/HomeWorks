@@ -22,7 +22,7 @@ public class ExceptionMain2 {
                     System.out.println(" Введите число от 1 до 10. У вас попыток: " + count);
                     count--;
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 if (count == 0) {
                     System.out.println("Попыток больше нет");
                    return;

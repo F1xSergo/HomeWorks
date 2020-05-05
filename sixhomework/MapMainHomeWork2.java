@@ -10,7 +10,8 @@ public class MapMainHomeWork2 {
     public static void main(String[] args) {
         String filePath = readAllBytesJava("f:/git/src/edu/academy/fivehomework/Война и мир.txt");
 
-        String[] words = filePath.toLowerCase().replaceAll("\\,|\\.|\\(|\\?|\\!|\\|\\--|\\-|\\;", "").split(" ");
+        String[] words = filePath.toLowerCase().replaceAll("\\,|\\.|\\(|\\?|\\!|\\|\\--|\\-|\\;|\\\n", " ")
+                .split(" +");//(+) найти скоплние пробелов и удалить их
         //String[] words = filePath.toLowerCase().split(" ");
 
 
