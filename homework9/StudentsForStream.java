@@ -3,19 +3,11 @@ package edu.academy.homework9;
 import java.io.Serializable;
 
 public class StudentsForStream implements Serializable {
-   private int marks;
-   private int name;
+    private int name;
+    private int marks;
 
-    public StudentsForStream(int marks, int name) {
-        this.marks = marks;
+    public StudentsForStream(int name, int marks) {
         this.name = name;
-    }
-
-    public int getMarks() {
-        return marks;
-    }
-
-    public void setMarks(int marks) {
         this.marks = marks;
     }
 
@@ -27,11 +19,19 @@ public class StudentsForStream implements Serializable {
         this.name = name;
     }
 
+    public int getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int marks) {
+        this.marks = marks;
+    }
+
     @Override
     public String toString() {
         return "Students{" +
-                "marks=" + marks +
-                ", name='" + name + '\'' +
+                "name -" + name +
+                ", marks -" + marks +
                 '}';
     }
 }
