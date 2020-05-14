@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class EasySearch implements ISearchEngine {
-     String filePath = "f:/git/src/edu/academy/fivehomework/Война и мир.txt";
+
      String a = " Война";
      String b = " и ";
      String c = " мир ";
