@@ -1,6 +1,6 @@
 package edu.academy.homework10;
 
-import edu.academy.sixhomework.SortedByValue;
+import edu.academy.homework6.SortedByValue;
 
 import java.io.IOException;
 import java.nio.file.Files;
