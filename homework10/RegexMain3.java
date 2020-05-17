@@ -1,7 +1,5 @@
 package edu.academy.homework10;
 
-import edu.academy.homework6.SortedByValue;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -25,10 +23,10 @@ public class RegexMain3 {
 
         try (Stream<String> str = Files.lines(Paths.get("Benign_list_big_final.csv"))) {
             String[] array = str.distinct().toArray(value -> new String[value]);
-           // System.out.println("array = " + Arrays.asList(array));
+           //System.out.println("array = " + Arrays.asList(array));
             List<String> urls = Arrays.asList(array);
 
-//            Pattern pattern = Pattern.compile("(http|https)://([\\w\\d]*)([.\\w]+)/?.*");
+  //          Pattern pattern = Pattern.compile("(http|https)://([\\w\\d]*)([.\\w]+)/?.*");
             Pattern pattern = Pattern.compile("(http|https)://([\\w.]*\\.([\\w]*))/?.*");
 
             //Создаем чистые листы для нужных нам выборок из паттерна
@@ -36,6 +34,7 @@ public class RegexMain3 {
             List<String> protocols = new ArrayList<>();
             List<String> domens = new ArrayList<>();
             List<String> upperDomens = new ArrayList<>();
+
 
             for (String url : urls) {// пишем цикл проверок соответствия адресов паттерну и выводим нужные выборки по группам (сразу добавляем каждую выборку в свой лист)
                 Matcher matcher = pattern.matcher(url);
@@ -47,6 +46,7 @@ public class RegexMain3 {
                     upperDomens.add(matcher.group(3));
 //                    System.out.println(url + " : " + matcher.matches());
                     // System.out.println("G0 " + matcher.group(0));
+
 
                     if (matcher.groupCount() > 0) {
                         //   System.out.println("G1 " + matcher.group(1));
@@ -98,17 +98,18 @@ public class RegexMain3 {
             Map<String, Integer> mapOfProtocols = new LinkedHashMap<>();
             Map<String, Integer> mapOfDomens = new LinkedHashMap<>();
             Map<String, Integer> mapOfUpperDomens = new LinkedHashMap<>();
-
             // добавляем элементы листов выборок в Мапы с помощью нашего статического метода
             mapAdditor(mapOfProtocols, protocols);
             mapAdditor(mapOfDomens, domens);
             mapAdditor(mapOfUpperDomens, upperDomens);
 
+
+
             // заносим отсортированные Map-ы выборок в новые Map сохраняя порядок вставки
             Map<String, Integer> sortedProtocols = SortedByValue.sortByValue(mapOfProtocols);
             Map<String, Integer> sortedDomens = SortedByValue.sortByValue(mapOfDomens);
             Map<String, Integer> sortedUpperDomens = SortedByValue.sortByValue(mapOfUpperDomens);
-
+            System.out.println(sortedProtocols);
             // выводим ТОП-10 часто употребляемых протоколов
             List<Map.Entry<String, Integer>> list1 = new ArrayList<>(sortedProtocols.entrySet());
             System.out.println("Топ 2 часто встречающихся протоколов Protocols адресов:");

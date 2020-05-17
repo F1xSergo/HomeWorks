@@ -8,7 +8,7 @@ import java.util.*;
 
 public class MapMainHomeWork2 {
     public static void main(String[] args) {
-        String filePath = readAllBytesJava("f:/git/src/edu/academy/fivehomework/Война и мир.txt");
+        String filePath = readAllBytesJava("f:/git/src/edu/academy/homework5/Война и мир.txt");
 
         String[] words = filePath.toLowerCase().replaceAll("\\,|\\.|\\(|\\?|\\!|\\|\\--|\\-|\\;|\\\n", " ")
                 .split(" +");//(+) найти скоплние пробелов и удалить их

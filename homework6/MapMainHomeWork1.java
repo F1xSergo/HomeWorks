@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class MapMainHomeWork1 {
     public static void main(String[] args) {
-        String filePath = readAllBytesJava("f:/git/src/edu/academy/fivehomework/Война и мир.txt");
+        String filePath = readAllBytesJava("f:/git/src/edu/academy/homework5/Война и мир.txt");
         String[] words = filePath.toLowerCase().split(" ");
 
         Map<String, Integer> data = new HashMap<>();

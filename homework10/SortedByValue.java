@@ -1,4 +1,4 @@
-package edu.academy.homework6;
+package edu.academy.homework10;
 
 
     import java.util.*;
